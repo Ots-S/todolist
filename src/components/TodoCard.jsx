@@ -28,8 +28,15 @@ export default function TodoCard(props, { isDragging, text }) {
 
   return (
     <div ref={dragRef} style={{ opacity }}>
-      <Box p={2} bgcolor="info.main" className={classes.toDoContainer}>
-        <WhiteTextTypography>{props.todo}</WhiteTextTypography>
+      <Box
+        p={2}
+        bgcolor="info.main"
+        className={classes.toDoContainer}
+        hideSourceOnDrag={true}
+      >
+        <WhiteTextTypography p={2} bgcolor="info.main" hideSourceOnDrag={true}>
+          {props.todo}
+        </WhiteTextTypography>
       </Box>
     </div>
   );
