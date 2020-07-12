@@ -11,16 +11,15 @@ const useStyles = makeStyles({
 
 export default function ToDo(props) {
   const classes = useStyles();
-
+  console.log(props);
   return (
     <div>
       <Box className={classes.toDoContainer} mt={2}>
         <Typography variant="h5" align="center">
           TO DO
         </Typography>
-        {props.todos.map((todo) => (
-          <TodoCard key={todo} todo={todo} />
-        ))}
+        <TodoCard todo={props.todos} />
+
       </Box>
     </div>
   );
