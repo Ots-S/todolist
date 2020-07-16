@@ -19,7 +19,6 @@ export default function ToDo(props) {
           TO DO
         </Typography>
         <TodoCard todo={props.todos} />
-
       </Box>
     </div>
   );
