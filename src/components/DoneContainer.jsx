@@ -1,8 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { useDrop } from "react-dnd";
-import { ItemTypes } from "./Constants";
+import { Droppable } from "react-beautiful-dnd"
 
 const useStyles = makeStyles({
   doneContainer: {
@@ -24,11 +23,16 @@ export default function Done(props) {
   return (
     <div ref={drop}>
       <Box className={classes.doneContainer} mt={2}>
+        <Droppable droppableId={this.props.column.id}>
+          {() => (
+            
+          )}
+        </Droppable>
         <Typography variant="h5" align="center">
           {props.todo}
         </Typography>
-        <h1>{props.todo}</h1>
+      <h1>{props.todo}</h1>
       </Box>
-    </div>
+    </div >
   );
 }
