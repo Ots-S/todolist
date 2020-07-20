@@ -7,7 +7,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
     taskContainer: {
         backgroundColor: "white",
-        padding: "2em"
+        padding: "2em",
+        minHeight: "10em"
     },
     todoContainer: {
         padding: "1em",
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
 function Column(props) {
     const classes = useStyles();
     return (
-        <Grid container item xs={3} alignItems="space-between" justify="space-between" direction="column" className={classes.todoContainer} >
+        <Grid container item xs={3} direction="column" className={classes.todoContainer} >
             <Typography> {props.column.title}</Typography>
             <Droppable droppableId={props.column.id}>
                 {(provided, snapshot) => (
